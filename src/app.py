@@ -49,7 +49,7 @@ def create_member():
     return jsonify("Member goes BRRRRR"), 200
 
 @app.route('/member/<int:id_member>', methods=['DELETE'])
-def delete_tasks(id_member):
+def delete_one(id_member):
     member = jackson_family.delete_member(id_member)
     return jsonify(member), 200
 
